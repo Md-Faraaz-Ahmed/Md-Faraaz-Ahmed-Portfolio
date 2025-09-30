@@ -14,7 +14,7 @@ export default function About() {
     <section id="about">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-4xl mx-auto">
-            <p className="text-lg text-muted-foreground mb-2">Let me introduce myself</p>
+            <p className="text-lg text-muted-foreground mb-2">LET ME INTRODUCE MYSELF</p>
             <SectionHeading className="items-start text-left !mb-6">About Me</SectionHeading>
             <Card className="shadow-lg">
             <CardContent className="p-8 md:p-12 space-y-6">
