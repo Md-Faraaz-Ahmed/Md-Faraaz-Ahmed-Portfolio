@@ -18,11 +18,6 @@ const skillCategories = [
         icon: <BarChart3 className="h-6 w-6" />,
         skills: ["Power BI", "Tableau", "Excel", "DAX"]
     },
-    {
-        title: "Data Engineering & Other",
-        icon: <Database className="h-6 w-6" />,
-        skills: ["ETL", "Git & GitHub", "Docker", "Data Warehousing"]
-    },
 ];
 
 export default function Skills() {
