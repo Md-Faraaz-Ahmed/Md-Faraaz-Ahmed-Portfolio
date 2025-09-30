@@ -8,12 +8,12 @@ export default function Hero() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid md:grid-cols-1 gap-12 items-center">
           <div className="space-y-6 text-center animate-in fade-in slide-in-from-bottom-12 duration-500">
-            <p className="font-semibold text-primary tracking-wider">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tighter font-headline">
+              Hi, I'm Mohammed Faraaz Ahmed
+            </h1>
+            <p className="font-semibold text-primary tracking-wider text-lg">
               DATA ANALYTICS ENTHUSIAST
             </p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tighter font-headline">
-              Mohammed Faraaz Ahmed
-            </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               I turn raw data into actionable insights using Python, SQL, and interactive visualizations.
             </p>
