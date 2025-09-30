@@ -1,6 +1,12 @@
 import { Button } from '@/components/ui/button';
-import { Mail } from 'lucide-react';
+import { Mail, Linkedin, Github } from 'lucide-react';
 import Link from 'next/link';
+
+const socialLinks = [
+  { name: 'Email', icon: <Mail className="h-6 w-6" />, href: 'mailto:faraaz.ahmed.m@outlook.com' },
+  { name: 'LinkedIn', icon: <Linkedin className="h-6 w-6" />, href: 'https://www.linkedin.com/in/mfaraaz' },
+  { name: 'GitHub', icon: <Github className="h-6 w-6" />, href: 'https://github.com/m-faraaz-ahmed' },
+];
 
 export default function Hero() {
   return (
@@ -17,13 +23,19 @@ export default function Hero() {
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               I turn raw data into actionable insights using Python, SQL, and interactive visualizations.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" variant="outline">
-                <Link href="#contact">
-                  <Mail className="mr-2 h-4 w-4" />
-                  Let's Connect
-                </Link>
-              </Button>
+            <div className="flex flex-row gap-6 justify-center pt-4">
+              {socialLinks.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                  aria-label={link.name}
+                >
+                  {link.icon}
+                </a>
+              ))}
             </div>
              <p className="text-sm text-muted-foreground">Python • SQL • Power BI • Tableau • Data Visualization</p>
           </div>
