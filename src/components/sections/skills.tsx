@@ -1,12 +1,12 @@
 import SectionHeading from "@/components/section-heading";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
-import { Python, Database, BarChart3, Settings, BrainCircuit } from "lucide-react";
+import { Code, Database, BarChart3, Settings, BrainCircuit } from "lucide-react";
 
 const skillCategories = [
     {
         title: "Languages",
-        icon: <Python className="h-6 w-6" />,
+        icon: <Code className="h-6 w-6" />,
         skills: [
             { name: "Python", proficiency: 95 },
             { name: "SQL", proficiency: 90 },
