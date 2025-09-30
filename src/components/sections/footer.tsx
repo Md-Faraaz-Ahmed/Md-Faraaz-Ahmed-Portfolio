@@ -7,7 +7,7 @@ import KaggleIcon from '@/components/icons/kaggle-icon';
 const socialLinks = [
   { name: 'Email', icon: <Mail className="h-5 w-5" />, href: 'mailto:m.faraaz.ahmed01@gmail.com' },
   { name: 'LinkedIn', icon: <Linkedin className="h-5 w-5" />, href: 'https://www.linkedin.com/in/mohammed-faraaz-ahmed-69739b258' },
-  { name: 'GitHub', icon: <Github className="h-5 w-5" />, href: 'https://github.com/m-faraaz-ahmed' },
+  { name: 'GitHub', icon: <Github className="h-5 w-5" />, href: 'https://github.com/Md-Faraaz-Ahmed' },
   { name: 'Kaggle', icon: <KaggleIcon className="h-5 w-5" />, href: 'https://www.kaggle.com/mohammedfaraazahmed' },
 ];
 
