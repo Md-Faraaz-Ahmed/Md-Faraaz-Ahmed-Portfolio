@@ -60,56 +60,55 @@ export default function Header() {
           <span className="text-lg font-semibold tracking-wider">MFA</span>
         </Link>
         
-        <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
-          {navLinks.map((link) => (
-            <Link
-              key={link.id}
-              href={`#${link.id}`}
-              className={cn(
-                "transition-colors hover:text-primary",
-                activeSection === link.id ? "text-primary font-semibold" : "text-muted-foreground"
-              )}
-            >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
-
-        <div className="flex items-center gap-2">
-          <ThemeToggle />
-          <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
-            <SheetTrigger asChild className="md:hidden">
-              <Button variant="ghost" size="icon">
-                <Menu className="h-6 w-6" />
-                <span className="sr-only">Open navigation menu</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right" className="w-[280px]">
-              <div className="flex flex-col h-full p-6">
-                <div className="flex items-center justify-between mb-8">
-                   <Link href="#hero" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
-                      <Code className="h-6 w-6 text-primary" />
-                      <span className="text-lg font-semibold tracking-wider">MFA</span>
-                    </Link>
+        <div className="flex items-center gap-4">
+            <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
+            {navLinks.map((link) => (
+                <Link
+                key={link.id}
+                href={`#${link.id}`}
+                className={cn(
+                    "transition-colors hover:text-primary",
+                    activeSection === link.id ? "text-primary font-semibold" : "text-muted-foreground"
+                )}
+                >
+                {link.label}
+                </Link>
+            ))}
+            </nav>
+            <ThemeToggle />
+            <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
+                <SheetTrigger asChild className="md:hidden">
+                <Button variant="ghost" size="icon">
+                    <Menu className="h-6 w-6" />
+                    <span className="sr-only">Open navigation menu</span>
+                </Button>
+                </SheetTrigger>
+                <SheetContent side="right" className="w-[280px]">
+                <div className="flex flex-col h-full p-6">
+                    <div className="flex items-center justify-between mb-8">
+                    <Link href="#hero" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
+                        <Code className="h-6 w-6 text-primary" />
+                        <span className="text-lg font-semibold tracking-wider">MFA</span>
+                        </Link>
+                    </div>
+                    <nav className="flex flex-col gap-6 text-lg font-medium">
+                    {navLinks.map((link) => (
+                        <Link
+                        key={link.id}
+                        href={`#${link.id}`}
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        className={cn(
+                            "transition-colors hover:text-primary",
+                            activeSection === link.id ? "text-primary" : "text-muted-foreground"
+                        )}
+                        >
+                        {link.label}
+                        </Link>
+                    ))}
+                    </nav>
                 </div>
-                <nav className="flex flex-col gap-6 text-lg font-medium">
-                  {navLinks.map((link) => (
-                    <Link
-                      key={link.id}
-                      href={`#${link.id}`}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                      className={cn(
-                        "transition-colors hover:text-primary",
-                        activeSection === link.id ? "text-primary" : "text-muted-foreground"
-                      )}
-                    >
-                      {link.label}
-                    </Link>
-                  ))}
-                </nav>
-              </div>
-            </SheetContent>
-          </Sheet>
+                </SheetContent>
+            </Sheet>
         </div>
       </div>
     </header>
