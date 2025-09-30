@@ -24,23 +24,25 @@ export default function Skills() {
     return (
         <section id="skills" className="bg-secondary/30 dark:bg-secondary/10">
             <div className="container mx-auto px-4 md:px-6">
-                <SectionHeading className="items-start text-left !mb-8">Skills</SectionHeading>
-                <div className="flex flex-col gap-10">
-                    {skillCategories.map((category) => (
-                        <div key={category.title} className="flex flex-col space-y-4">
-                             <h3 className="flex items-center gap-3 text-xl font-semibold text-primary/90">
-                                <span className="text-primary">{category.icon}</span>
-                                {category.title}
-                            </h3>
-                            <div className="flex flex-wrap gap-2">
-                                {category.skills.map((skill) => (
-                                    <Badge key={skill} variant="secondary" className="text-sm px-3 py-1">
-                                        {skill}
-                                    </Badge>
-                                ))}
+                <div className="max-w-4xl mx-auto">
+                    <SectionHeading className="items-start text-left !mb-8">Skills</SectionHeading>
+                    <div className="flex flex-col gap-10">
+                        {skillCategories.map((category) => (
+                            <div key={category.title} className="flex flex-col space-y-4">
+                                <h3 className="flex items-center gap-3 text-xl font-semibold text-primary/90">
+                                    <span className="text-primary">{category.icon}</span>
+                                    {category.title}
+                                </h3>
+                                <div className="flex flex-wrap gap-2">
+                                    {category.skills.map((skill) => (
+                                        <Badge key={skill} variant="secondary" className="text-sm px-3 py-1">
+                                            {skill}
+                                        </Badge>
+                                    ))}
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>
