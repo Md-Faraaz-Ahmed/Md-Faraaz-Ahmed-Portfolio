@@ -1,6 +1,6 @@
 import SectionHeading from "@/components/section-heading";
 import { Badge } from "@/components/ui/badge";
-import { Code, Database, BarChart3, BrainCircuit } from "lucide-react";
+import { Code, BarChart3, BrainCircuit } from "lucide-react";
 
 const skillCategories = [
     {
@@ -25,7 +25,7 @@ export default function Skills() {
         <section id="skills" className="bg-secondary/30 dark:bg-secondary/10">
             <div className="container mx-auto px-4 md:px-6">
                 <SectionHeading className="items-start text-left !mb-8">Skills</SectionHeading>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-10">
                     {skillCategories.map((category) => (
                         <div key={category.title} className="flex flex-col space-y-4">
                              <h3 className="flex items-center gap-3 text-xl font-semibold text-primary/90">
