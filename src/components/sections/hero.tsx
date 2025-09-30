@@ -3,7 +3,7 @@ import { Mail, Linkedin, Github } from 'lucide-react';
 import Link from 'next/link';
 
 const socialLinks = [
-  { name: 'Email', icon: <Mail className="h-6 w-6" />, href: 'mailto:faraaz.ahmed.m@outlook.com' },
+  { name: 'Email', icon: <Mail className="h-6 w-6" />, href: 'mailto:m.faraaz.ahmed01@gmail.com' },
   { name: 'LinkedIn', icon: <Linkedin className="h-6 w-6" />, href: 'https://www.linkedin.com/in/mfaraaz' },
   { name: 'GitHub', icon: <Github className="h-6 w-6" />, href: 'https://github.com/m-faraaz-ahmed' },
 ];
