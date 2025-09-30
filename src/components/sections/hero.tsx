@@ -1,6 +1,4 @@
-import { Button } from '@/components/ui/button';
 import { Mail, Linkedin, Github } from 'lucide-react';
-import Link from 'next/link';
 
 const socialLinks = [
   { name: 'Email', icon: <Mail className="h-6 w-6" />, href: 'mailto:m.faraaz.ahmed01@gmail.com' },
