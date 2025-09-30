@@ -1,5 +1,4 @@
 import SectionHeading from "@/components/section-heading";
-import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle } from "lucide-react";
 
 export default function About() {
@@ -16,8 +15,7 @@ export default function About() {
         <div className="max-w-4xl mx-auto">
             <p className="text-lg text-muted-foreground mb-2">LET ME INTRODUCE MYSELF</p>
             <SectionHeading className="items-start text-left !mb-6">About Me</SectionHeading>
-            <Card className="shadow-lg">
-            <CardContent className="p-8 md:p-12 space-y-6">
+            <div className="border-l-4 border-primary pl-8 space-y-8">
                 <p className="text-lg text-muted-foreground leading-relaxed">
                 I'm a passionate data analytics enthusiast currently pursuing my Bachelor's in Computer Science Engineering (Data Science). My journey into the world of data began with a fascination for uncovering hidden patterns and stories within complex datasets. I thrive on transforming raw information into clear, actionable insights that drive business decisions. My goal is to leverage my skills in Python, SQL, and data visualization to solve real-world problems and contribute to data-driven cultures.
                 </p>
@@ -32,8 +30,7 @@ export default function About() {
                     ))}
                 </ul>
                 </div>
-            </CardContent>
-            </Card>
+            </div>
         </div>
       </div>
     </section>
