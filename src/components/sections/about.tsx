@@ -12,7 +12,7 @@ export default function About() {
   return (
     <section id="about">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
             <p className="text-lg text-muted-foreground mb-2">LET ME INTRODUCE MYSELF</p>
             <SectionHeading className="items-start text-left !mb-6">About Me</SectionHeading>
             <div className="border-l-4 border-primary pl-8 space-y-8">

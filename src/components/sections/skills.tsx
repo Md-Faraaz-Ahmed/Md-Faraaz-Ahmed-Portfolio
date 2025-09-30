@@ -24,7 +24,7 @@ export default function Skills() {
     return (
         <section id="skills" className="bg-secondary/30 dark:bg-secondary/10">
             <div className="container mx-auto px-4 md:px-6">
-                <div className="max-w-4xl mx-auto">
+                <div className="max-w-5xl mx-auto">
                     <SectionHeading className="items-start text-left !mb-8">Skills</SectionHeading>
                     <div className="flex flex-col gap-10">
                         {skillCategories.map((category) => (

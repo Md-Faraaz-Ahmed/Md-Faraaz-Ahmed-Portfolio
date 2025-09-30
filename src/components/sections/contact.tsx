@@ -65,49 +65,51 @@ export default function Contact() {
   return (
     <section id="contact">
       <div className="container mx-auto px-4 md:px-6">
-        <SectionHeading>Get In Touch</SectionHeading>
-        <Card className="max-w-4xl mx-auto">
-          <CardContent className="p-6 md:p-8 grid md:grid-cols-2 gap-8">
-            <div className="space-y-4">
-              <h3 className="text-2xl font-semibold">Let's build something great.</h3>
-              <p className="text-muted-foreground">
-                I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
-              </p>
-              <div className="flex space-x-4 pt-4">
-                {socialLinks.map((link) => (
-                  <a
-                    key={link.name}
-                    href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                    aria-label={link.name}
-                  >
-                    {link.icon}
-                  </a>
-                ))}
-              </div>
-            </div>
-            <form ref={formRef} action={dispatch} className="space-y-4">
-              <div>
-                <Label htmlFor="name">Name</Label>
-                <Input id="name" name="name" placeholder="Your Name" required />
-                {state.errors?.name && <p className="text-sm text-destructive mt-1">{state.errors.name[0]}</p>}
-              </div>
-              <div>
-                <Label htmlFor="email">Email</Label>
-                <Input id="email" name="email" type="email" placeholder="your.email@example.com" required />
-                 {state.errors?.email && <p className="text-sm text-destructive mt-1">{state.errors.email[0]}</p>}
-              </div>
-              <div>
-                <Label htmlFor="message">Message</Label>
-                <Textarea id="message" name="message" placeholder="Your message here..." rows={4} required />
-                 {state.errors?.message && <p className="text-sm text-destructive mt-1">{state.errors.message[0]}</p>}
-              </div>
-              <SubmitButton />
-            </form>
-          </CardContent>
-        </Card>
+        <div className="max-w-5xl mx-auto">
+            <SectionHeading>Get In Touch</SectionHeading>
+            <Card>
+            <CardContent className="p-6 md:p-8 grid md:grid-cols-2 gap-8">
+                <div className="space-y-4">
+                <h3 className="text-2xl font-semibold">Let's build something great.</h3>
+                <p className="text-muted-foreground">
+                    I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+                </p>
+                <div className="flex space-x-4 pt-4">
+                    {socialLinks.map((link) => (
+                    <a
+                        key={link.name}
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-muted-foreground hover:text-primary transition-colors"
+                        aria-label={link.name}
+                    >
+                        {link.icon}
+                    </a>
+                    ))}
+                </div>
+                </div>
+                <form ref={formRef} action={dispatch} className="space-y-4">
+                <div>
+                    <Label htmlFor="name">Name</Label>
+                    <Input id="name" name="name" placeholder="Your Name" required />
+                    {state.errors?.name && <p className="text-sm text-destructive mt-1">{state.errors.name[0]}</p>}
+                </div>
+                <div>
+                    <Label htmlFor="email">Email</Label>
+                    <Input id="email" name="email" type="email" placeholder="your.email@example.com" required />
+                    {state.errors?.email && <p className="text-sm text-destructive mt-1">{state.errors.email[0]}</p>}
+                </div>
+                <div>
+                    <Label htmlFor="message">Message</Label>
+                    <Textarea id="message" name="message" placeholder="Your message here..." rows={4} required />
+                    {state.errors?.message && <p className="text-sm text-destructive mt-1">{state.errors.message[0]}</p>}
+                </div>
+                <SubmitButton />
+                </form>
+            </CardContent>
+            </Card>
+        </div>
       </div>
     </section>
   );

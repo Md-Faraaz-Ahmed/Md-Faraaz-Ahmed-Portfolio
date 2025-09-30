@@ -49,49 +49,51 @@ export default function Projects() {
   return (
     <section id="projects">
       <div className="container mx-auto px-4 md:px-6">
-        <SectionHeading>My Projects</SectionHeading>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projects.map((project) => (
-            <Card key={project.id} className="group overflow-hidden flex flex-col transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
-              {project.image && (
-                <div className="overflow-hidden">
-                    <Image
-                    src={project.image.imageUrl}
-                    alt={project.title}
-                    data-ai-hint={project.image.imageHint}
-                    width={600}
-                    height={400}
-                    className="object-cover w-full h-60 transition-transform duration-300 group-hover:scale-105"
-                    />
-                </div>
-              )}
-              <CardHeader>
-                <CardTitle>{project.title}</CardTitle>
-                <CardDescription>{project.description}</CardDescription>
-              </CardHeader>
-              <CardContent className="flex-grow">
-                <div className="flex flex-wrap gap-2">
-                  {project.tech.map((t) => (
-                    <Badge key={t} variant="secondary">{t}</Badge>
-                  ))}
-                </div>
-              </CardContent>
-              <CardFooter className="flex gap-4">
-                <Button asChild variant="outline">
-                  <a href={project.github} target="_blank" rel="noopener noreferrer">
-                    <Github className="mr-2 h-4 w-4" /> View Code
-                  </a>
-                </Button>
-                {project.live && (
-                  <Button asChild>
-                    <a href={project.live} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="mr-2 h-4 w-4" /> Live Demo
-                    </a>
-                  </Button>
+        <div className="max-w-5xl mx-auto">
+            <SectionHeading>My Projects</SectionHeading>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {projects.map((project) => (
+                <Card key={project.id} className="group overflow-hidden flex flex-col transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                {project.image && (
+                    <div className="overflow-hidden">
+                        <Image
+                        src={project.image.imageUrl}
+                        alt={project.title}
+                        data-ai-hint={project.image.imageHint}
+                        width={600}
+                        height={400}
+                        className="object-cover w-full h-60 transition-transform duration-300 group-hover:scale-105"
+                        />
+                    </div>
                 )}
-              </CardFooter>
-            </Card>
-          ))}
+                <CardHeader>
+                    <CardTitle>{project.title}</CardTitle>
+                    <CardDescription>{project.description}</CardDescription>
+                </CardHeader>
+                <CardContent className="flex-grow">
+                    <div className="flex flex-wrap gap-2">
+                    {project.tech.map((t) => (
+                        <Badge key={t} variant="secondary">{t}</Badge>
+                    ))}
+                    </div>
+                </CardContent>
+                <CardFooter className="flex gap-4">
+                    <Button asChild variant="outline">
+                    <a href={project.github} target="_blank" rel="noopener noreferrer">
+                        <Github className="mr-2 h-4 w-4" /> View Code
+                    </a>
+                    </Button>
+                    {project.live && (
+                    <Button asChild>
+                        <a href={project.live} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="mr-2 h-4 w-4" /> Live Demo
+                        </a>
+                    </Button>
+                    )}
+                </CardFooter>
+                </Card>
+            ))}
+            </div>
         </div>
       </div>
     </section>
