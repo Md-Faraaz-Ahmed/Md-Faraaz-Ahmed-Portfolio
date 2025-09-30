@@ -1,45 +1,28 @@
 import SectionHeading from "@/components/section-heading";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Progress } from "@/components/ui/progress";
-import { Code, Database, BarChart3, Settings, BrainCircuit } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Code, Database, BarChart3, BrainCircuit } from "lucide-react";
 
 const skillCategories = [
     {
-        title: "Languages",
+        title: "Languages & Databases",
         icon: <Code className="h-6 w-6" />,
-        skills: [
-            { name: "Python", proficiency: 95 },
-            { name: "SQL", proficiency: 90 },
-            { name: "R", proficiency: 70 },
-        ]
+        skills: ["Python", "SQL", "R", "MySQL", "PostgreSQL"]
     },
     {
         title: "Libraries & Tools",
         icon: <BrainCircuit className="h-6 w-6" />,
-        skills: [
-            { name: "Pandas & NumPy", proficiency: 90 },
-            { name: "Scikit-learn", proficiency: 80 },
-            { name: "Matplotlib & Seaborn", proficiency: 85 },
-            { name: "Plotly", proficiency: 80 },
-        ]
+        skills: ["Pandas", "NumPy", "Scikit-learn", "Matplotlib", "Seaborn", "Plotly", "Jupyter"]
     },
     {
         title: "BI & Visualization",
         icon: <BarChart3 className="h-6 w-6" />,
-        skills: [
-            { name: "Power BI", proficiency: 90 },
-            { name: "Tableau", proficiency: 85 },
-            { name: "Excel", proficiency: 95 },
-        ]
+        skills: ["Power BI", "Tableau", "Excel", "DAX"]
     },
     {
         title: "Data Engineering & Other",
         icon: <Database className="h-6 w-6" />,
-        skills: [
-            { name: "ETL Basics", proficiency: 80 },
-            { name: "Git & GitHub", proficiency: 85 },
-            { name: "Docker", proficiency: 60 },
-        ]
+        skills: ["ETL", "Git & GitHub", "Docker", "Data Warehousing"]
     },
 ];
 
@@ -48,24 +31,20 @@ export default function Skills() {
         <section id="skills" className="bg-secondary/30 dark:bg-secondary/10">
             <div className="container mx-auto px-4 md:px-6">
                 <SectionHeading>Technical Skills</SectionHeading>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {skillCategories.map((category) => (
-                        <Card key={category.title} className="shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <Card key={category.title} className="shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col">
                             <CardHeader>
                                 <CardTitle className="flex items-center gap-3 text-xl">
                                     <span className="text-primary">{category.icon}</span>
                                     {category.title}
                                 </CardTitle>
                             </CardHeader>
-                            <CardContent className="space-y-4">
+                            <CardContent className="flex flex-wrap gap-2 flex-grow">
                                 {category.skills.map((skill) => (
-                                    <div key={skill.name}>
-                                        <div className="flex justify-between items-center mb-1">
-                                            <span className="text-sm font-medium text-muted-foreground">{skill.name}</span>
-                                            <span className="text-sm font-medium text-primary">{skill.proficiency}%</span>
-                                        </div>
-                                        <Progress value={skill.proficiency} aria-label={`${skill.name} proficiency`} />
-                                    </div>
+                                    <Badge key={skill} variant="secondary" className="text-sm">
+                                        {skill}
+                                    </Badge>
                                 ))}
                             </CardContent>
                         </Card>
