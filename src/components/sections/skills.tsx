@@ -1,5 +1,4 @@
 import SectionHeading from "@/components/section-heading";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Code, Database, BarChart3, BrainCircuit } from "lucide-react";
 
@@ -30,24 +29,22 @@ export default function Skills() {
     return (
         <section id="skills" className="bg-secondary/30 dark:bg-secondary/10">
             <div className="container mx-auto px-4 md:px-6">
-                <SectionHeading className="items-start text-left !mb-6">Skills</SectionHeading>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <SectionHeading className="items-start text-left !mb-8">Skills</SectionHeading>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10">
                     {skillCategories.map((category) => (
-                        <Card key={category.title} className="shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col">
-                            <CardHeader>
-                                <CardTitle className="flex items-center gap-3 text-xl">
-                                    <span className="text-primary">{category.icon}</span>
-                                    {category.title}
-                                </CardTitle>
-                            </CardHeader>
-                            <CardContent className="flex flex-wrap gap-2 flex-grow">
+                        <div key={category.title} className="flex flex-col space-y-4">
+                             <h3 className="flex items-center gap-3 text-xl font-semibold text-primary/90">
+                                <span className="text-primary">{category.icon}</span>
+                                {category.title}
+                            </h3>
+                            <div className="flex flex-wrap gap-2">
                                 {category.skills.map((skill) => (
-                                    <Badge key={skill} variant="secondary" className="text-sm">
+                                    <Badge key={skill} variant="secondary" className="text-sm px-3 py-1">
                                         {skill}
                                     </Badge>
                                 ))}
-                            </CardContent>
-                        </Card>
+                            </div>
+                        </div>
                     ))}
                 </div>
             </div>
