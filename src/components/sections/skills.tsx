@@ -4,7 +4,7 @@ import { Code, BarChart3, BrainCircuit } from "lucide-react";
 
 const skillCategories = [
     {
-        title: "Languages & Databases",
+        title: "Languages",
         icon: <Code className="h-6 w-6" />,
         skills: ["Python", "SQL", "R"]
     },
