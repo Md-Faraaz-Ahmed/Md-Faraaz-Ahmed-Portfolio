@@ -17,7 +17,7 @@ export default function About() {
         <Card className="max-w-4xl mx-auto shadow-lg">
           <CardContent className="p-8 md:p-12 space-y-6">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I'm a passionate data analytics enthusiast currently pursuing my Master's in Computer Application. My journey into the world of data began with a fascination for uncovering hidden patterns and stories within complex datasets. I thrive on transforming raw information into clear, actionable insights that drive business decisions. My goal is to leverage my skills in Python, SQL, and data visualization to solve real-world problems and contribute to data-driven cultures.
+              I'm a passionate data analytics enthusiast currently pursuing my Bachelor's in Computer Science Engineering (Data Science). My journey into the world of data began with a fascination for uncovering hidden patterns and stories within complex datasets. I thrive on transforming raw information into clear, actionable insights that drive business decisions. My goal is to leverage my skills in Python, SQL, and data visualization to solve real-world problems and contribute to data-driven cultures.
             </p>
             <div>
               <h3 className="text-xl font-semibold mb-4 text-primary/90">My Core Interests</h3>
