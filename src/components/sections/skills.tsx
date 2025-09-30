@@ -11,7 +11,7 @@ const skillCategories = [
     {
         title: "Libraries & Tools",
         icon: <BrainCircuit className="h-6 w-6" />,
-        skills: ["Pandas", "NumPy", "Scikit-learn", "Matplotlib", "Seaborn", "Plotly", "Jupyter", "VS Code", "Git", "GitHub", "Firebase"]
+        skills: ["Pandas", "NumPy", "Scikit-learn", "Matplotlib", "Seaborn", "Plotly", "Jupyter", "VS Code", "Git", "GitHub", "Firebase", "Canva"]
     },
     {
         title: "BI & Visualization",
