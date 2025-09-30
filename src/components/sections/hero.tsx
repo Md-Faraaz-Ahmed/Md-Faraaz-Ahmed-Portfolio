@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { Download, Mail } from 'lucide-react';
+import { Mail } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Hero() {
@@ -18,12 +18,6 @@ export default function Hero() {
               I turn raw data into actionable insights using Python, SQL, and interactive visualizations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg">
-                <a href="/resume.pdf" download>
-                  <Download className="mr-2 h-4 w-4" />
-                  Download Resume
-                </a>
-              </Button>
               <Button asChild size="lg" variant="outline">
                 <Link href="#contact">
                   <Mail className="mr-2 h-4 w-4" />
