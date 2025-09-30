@@ -6,7 +6,7 @@ const skillCategories = [
     {
         title: "Languages",
         icon: <Code className="h-6 w-6" />,
-        skills: ["Python", "SQL", "R"]
+        skills: ["Python", "SQL", "R", "HTML"]
     },
     {
         title: "Libraries & Tools",
