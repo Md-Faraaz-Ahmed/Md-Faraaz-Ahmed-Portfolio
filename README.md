@@ -2,7 +2,7 @@
 
 ### Live Demo
 
-(https://md-faraaz-ahmed.vercel.app/)(#) 
+(https://md-faraaz-ahmed.vercel.app/) 
 
 ---
 
