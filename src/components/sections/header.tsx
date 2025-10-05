@@ -56,7 +56,7 @@ export default function Header() {
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
         <Link href="#hero" className="flex items-center gap-2" aria-label="Homepage">
           <Code className="h-6 w-6 text-primary" />
-          <span className="text-lg font-semibold tracking-wider">MFA</span>
+          <span className="text-lg font-semibold tracking-wider">Md Faraaz Ahmed</span>
         </Link>
         
         <div className="flex items-center gap-4">
